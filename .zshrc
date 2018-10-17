@@ -1,4 +1,5 @@
 fpath=(~/.zsh/completion $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 source ~/.zsh/completion/git-completion-alias.bash
 autoload -U compinit
 compinit
