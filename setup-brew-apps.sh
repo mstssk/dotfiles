@@ -4,6 +4,7 @@ cd `dirname $0`
 
 brew -v
 
+brew install colordiff
 brew install zsh
 brew install zsh-completions
 
