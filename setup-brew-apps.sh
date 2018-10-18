@@ -11,4 +11,4 @@ brew install git
 
 brew install go
 
-# brew install rbenv ruby-build
+brew install rbenv ruby-build
