@@ -1,6 +1,10 @@
 # dotfiles
 
+今の所、mac前提
+
 ## 使い方
+
+※　事前に Homebrew をインストールしておく https://brew.sh/ 
 
 ```
 $ cd
