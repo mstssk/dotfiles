@@ -1,6 +1,6 @@
 [alias]
-	graph = !~/dotfiles/.git-graph.sh
-	g = !~/dotfiles/.git-graph.sh
+	graph = !~/dotfiles/git-graph.sh
+	g = !~/dotfiles/git-graph.sh
 	st = status
 	co = checkout
 	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
