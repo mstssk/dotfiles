@@ -3,6 +3,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 source ~/.zsh/completion/git-completion-alias.bash
 autoload -U compinit
 compinit
+# compinitでinsecure directoriesエラーが出たら当該ディレクトリの権限を調整してあげる
+# $ chmod g-w /usr/local/share
 
 # 大文字、小文字を区別せず補完
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
