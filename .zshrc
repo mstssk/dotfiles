@@ -34,8 +34,12 @@ export GOPATH=~/Development/gopath:~/Documents/goworkspace
 export PATH=$PATH:$(echo $GOPATH | tr : \\n | head -1)/bin:~/Development/go_appengine
 export PATH=$PATH:~/Development/google-cloud-sdk/bin
 
+if [ `uname` = "Darwin" ]; then
+  export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
+fi
+
 # ruby,rbenv
-eval "$(rbenv init -)"
+[ -f "$(which rbenv)" ] && eval "$(rbenv init - zsh)"
 
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
