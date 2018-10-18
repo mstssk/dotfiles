@@ -9,6 +9,9 @@ curl -O https://raw.github.com/git/git/master/contrib/completion/git-completion.
 mv git-completion.zsh _git
 
 # https://docs.npmjs.com/cli/completion
-npm completion > ./.zsh/completion/npm-completion.bash
+npm completion > ./npm-completion.bash
 
-rm -f ~/.zcompdump; compinit
+rm -f ~/.zcompdump
+if [ -x "`which compinit`" ]; then
+   compinit
+fi
