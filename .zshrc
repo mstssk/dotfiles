@@ -69,9 +69,20 @@ setopt hist_reduce_blanks
 setopt no_beep
 setopt hist_ignore_space
 
+# Macではプロンプトのユーザー名とRealName(システム設定からすぐ変えられるやつ)とで短い方を表示する
+# 会社マシンとかで、自分でユーザー名つけられなかった場合のため
+PROMPT_USERNAME="%n"
+if [ `uname` = "Darwin" ]; then
+  MY_USERNAME=`whoami`
+  MY_REALNAME=`dscl . -read ~ RealName | cut -c 11-`
+  if [ ${#MY_USERNAME} -gt ${#MY_REALNAME} ]; then
+    PROMPT_USERNAME=$MY_REALNAME
+  fi
+fi
+
 autoload colors
 colors
-PROMPT="%{${fg[white]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[white]}%}[${PROMPT_USERNAME}@%m] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[white]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[white]}%}[%~]%{${reset_color}%}"
