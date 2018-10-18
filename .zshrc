@@ -10,7 +10,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 export LANG=ja_JP.UTF-8
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 # export ANDROID_SDK_ROOT=~/Development/android-sdk-macosx
 # export ANDROID_SDK_HOME=$ANDROID_SDK_ROOT
 export ANDROID_HOME=~/Development/android-sdk-macosx
