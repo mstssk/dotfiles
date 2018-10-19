@@ -18,6 +18,7 @@ zshをターミナルのデフォルトに設定するなど別途必要
 
 ## よく使うソフト
 
+- https://imageoptim.com/mac
 - https://code.visualstudio.com/
 - https://docs.docker.com/docker-for-mac/
 - https://www.oracle.com/technetwork/java/javase/downloads/index.html
