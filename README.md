@@ -16,6 +16,10 @@ $ zsh
 
 zshをターミナルのデフォルトに設定するなど別途必要
 
+| ターミナルの設定例 |
+|:---------------:|
+| ![ターミナルの設定例](./doc/terminal_profile.png) |
+
 ## よく使うソフト
 
 - https://imageoptim.com/mac
@@ -23,6 +27,12 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - https://docs.docker.com/docker-for-mac/
 - https://www.oracle.com/technetwork/java/javase/downloads/index.html
 - https://www.tug.org/mactex/
+
+## よく使うショートカットキー
+
+| システム設定でショートカットキーを変更 |
+|:---------------:|
+| ![システム設定でショートカットキーを変更](./doc/keyborad_shortcuts.png) |
 
 ----
 
