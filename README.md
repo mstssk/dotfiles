@@ -24,6 +24,7 @@ zshをターミナルのデフォルトに設定するなど別途必要
 
 - https://imageoptim.com/mac
 - https://code.visualstudio.com/
+    - 設定同期する拡張機能: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 - https://docs.docker.com/docker-for-mac/
 - https://www.oracle.com/technetwork/java/javase/downloads/index.html
 - https://www.tug.org/mactex/
