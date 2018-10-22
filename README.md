@@ -28,6 +28,20 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - https://www.oracle.com/technetwork/java/javase/downloads/index.html
 - https://www.tug.org/mactex/
 
+## Visual Studio Code の設定を Dropbox で同期する
+
+Dropbox で既にユーザ設定と拡張機能を `~/Dropbox/Apps/VScode/` というフォルダで同期している前提。
+詳細はスクリプトの中身と参考記事を参照。
+
+```
+$ ./ln-sync-vscode-by-dropbox.sh
+```
+
+参考記事
+
+> Visual Studio Code の設定を共有・バックアップする - Qiita
+> https://qiita.com/maromaro3721/items/b6d71a5e5d2d6433778a
+
 ## よく使うショートカットキー
 
 | システム設定でショートカットキーを変更 |
