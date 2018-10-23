@@ -9,6 +9,7 @@ brew install zsh
 brew install zsh-completions
 
 brew install git
+brew install tig
 
 brew install go
 
