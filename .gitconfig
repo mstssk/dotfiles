@@ -22,3 +22,5 @@
 	prune = true
 [credential]
 	helper = osxkeychain
+[commit]
+	template = ~/.git-commit.template
