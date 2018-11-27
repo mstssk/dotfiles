@@ -12,4 +12,6 @@ nodebrew -v
 nodebrew install-binary v10
 nodebrew use v10
 
+npm config set init.license MIT
+
 ./setup-completion.sh # この中でnpm completionもやってる
