@@ -4,6 +4,7 @@ cd `dirname $0`
 
 # open https://brew.sh/
 ./setup-brew-apps.sh
+./setup-brew-python.sh
 ./setup-ln.sh
 
 # https://github.com/hokaccha/nodebrew
