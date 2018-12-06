@@ -8,6 +8,8 @@ brew install colordiff
 brew install zsh
 brew install zsh-completions
 
+brew install jq
+
 brew install git
 brew install tig
 
