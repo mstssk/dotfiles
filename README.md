@@ -4,7 +4,7 @@
 
 ## 使い方
 
-※ 事前に Homebrew をインストールしておく https://brew.sh/ 
+※ setup.sh が Homebrew https://brew.sh/ をインストールして、各種アプリをインストールします。
 
 ```
 $ cd

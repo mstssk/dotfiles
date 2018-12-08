@@ -2,7 +2,13 @@
 
 cd `dirname $0`
 
-# open https://brew.sh/
+# See https://brew.sh/
+if which brew; then
+    brew --version
+else
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 ./setup-brew-apps.sh
 ./setup-brew-python.sh
 ./setup-ln.sh
