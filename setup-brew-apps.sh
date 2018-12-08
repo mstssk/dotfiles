@@ -15,4 +15,5 @@ brew install tig
 
 brew install go
 
+# .zshrc で PATH は通してある
 brew install rbenv ruby-build
