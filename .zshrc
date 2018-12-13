@@ -74,6 +74,9 @@ setopt hist_reduce_blanks
 setopt no_beep
 setopt hist_ignore_space
 
+# 単語の一部と判定する文字群から / を削除. ctrl+w で文字削除する際は / を区切りとしたい.
+WORDCHARS=${WORDCHARS//[\/]}
+
 # Macではプロンプトのユーザー名とRealName(システム設定からすぐ変えられるやつ)とで短い方を表示する
 # 会社マシンとかで、自分でユーザー名つけられなかった場合のため
 PROMPT_USERNAME="%n"
