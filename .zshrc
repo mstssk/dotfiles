@@ -11,16 +11,11 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 export LANG=ja_JP.UTF-8
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-# export ANDROID_SDK_ROOT=~/Development/android-sdk-macosx
-# export ANDROID_SDK_HOME=$ANDROID_SDK_ROOT
-export ANDROID_HOME=~/Development/android-sdk-macosx
 
 ## Path settings
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
-# nvm より優先する
+# Java
 export PATH=$PATH:$JAVA_HOME/bin
-# android
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_NDK_ROOT
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
