@@ -21,8 +21,6 @@ export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 export PATH=$PATH:$JAVA_HOME/bin
 # android
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_NDK_ROOT
-# inkscape
-export PATH=$PATH:/Applications/Inkscape.app/Contents/Resources/bin
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
