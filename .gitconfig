@@ -3,6 +3,7 @@
 	g = !~/dotfiles/git-graph.sh
 	st = status
 	co = checkout
+	sh = show
 	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 	showr = show --color-words --word-diff-regex='\\w+|[^[:space:]]'
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
