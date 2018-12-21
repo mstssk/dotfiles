@@ -15,3 +15,6 @@ brew install go
 
 # .zshrc で PATH は通してある
 brew install rbenv ruby-build
+
+# 執筆用
+brew install redpen
