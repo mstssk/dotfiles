@@ -91,3 +91,7 @@ RPROMPT="%{${fg[white]}%}[%~]%{${reset_color}%}"
 alias ls="ls -G"
 alias la="ls -laGF"
 alias ll="ls -lG"
+
+# よく使う npm run-script のショートハンド
+alias nb="echo npm run build; npm run build"
+alias nl="echo npm run lint; npm run lint"
