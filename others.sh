@@ -11,4 +11,5 @@ wget -O $DEV_DIR/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/chann
 tar xvzf $DEV_DIR/google-cloud-sdk.tar.gz -C $DEV_DIR
 $DEV_DIR/google-cloud-sdk/install.sh --quiet
 gcloud components update
+gcloud components install app-engine-go --quiet
 # gcloud components install beta -q
