@@ -48,6 +48,8 @@ else
 fi
 export LESS='-SR'
 
+export FZF_DEFAULT_OPTS='--height 40% --reverse --print-query --inline-info'
+
 # java7以降は不要
 # export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
@@ -95,3 +97,4 @@ alias ll="ls -lG"
 # よく使う npm run-script のショートハンド
 alias nb="echo npm run build; npm run build"
 alias nl="echo npm run lint; npm run lint"
+alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
