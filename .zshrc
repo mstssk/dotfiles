@@ -33,7 +33,8 @@ export PATH=$PATH:~/Development/google-cloud-sdk/platform/google_appengine
 export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 
 if [ `uname` = "Darwin" ]; then
-  export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
+  # export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
+  export PATH=$PATH:/usr/local/opt/git/share/git-core/contrib/diff-highlight
 fi
 
 # ruby,rbenv
