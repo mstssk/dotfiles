@@ -25,12 +25,15 @@ export PATH=$PATH:~/bin
 export MANPATH=/opt/local/man:$MANPATH
 
 # go
-export GOPATH=~/Development/gopath:~/Documents/goworkspace
-export PATH=$PATH:$(echo $GOPATH | tr : \\n | head -1)/bin:~/Development/go_appengine
+export GOPATH=~/.go:~/Documents/goworkspace
+export PATH=$PATH:${GOPATH//://bin:}/bin
 export PATH=$PATH:~/Development/google-cloud-sdk/bin
+export PATH=$PATH:~/Development/google-cloud-sdk/platform/google_appengine
+export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 
 if [ `uname` = "Darwin" ]; then
   export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
+  export GOROOT=$(brew --prefix go)/libexec
 fi
 
 # ruby,rbenv
