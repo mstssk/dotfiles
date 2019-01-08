@@ -10,7 +10,8 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 export LANG=ja_JP.UTF-8
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 ## Path settings
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
