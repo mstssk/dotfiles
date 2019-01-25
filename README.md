@@ -28,6 +28,7 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - https://docs.docker.com/docker-for-mac/
 - https://www.oracle.com/technetwork/java/javase/downloads/index.html
 - https://www.tug.org/mactex/
+- https://clipy-app.com/
 
 ## よく使うショートカットキー
 
