@@ -35,6 +35,12 @@ export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 if [ `uname` = "Darwin" ]; then
   # export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
   export PATH=$PATH:/usr/local/opt/git/share/git-core/contrib/diff-highlight
+
+  # MySQL v5.7
+  # export PATH=$PATH:`brew --prefix mysql@5.7`/bin
+  if [ -e /usr/local/opt/mysql@5.7/ ]; then
+    export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
+  fi
 fi
 
 # ruby,rbenv
