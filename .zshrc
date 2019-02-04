@@ -107,4 +107,5 @@ alias ll="ls -lG"
 # よく使う npm run-script のショートハンド
 alias nb="echo npm run build; npm run build"
 alias nl="echo npm run lint; npm run lint"
+alias nf="echo 'npm run fmt|format'; npm run \$(npm run | grep -E '^  fmt|^  format')"
 alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
