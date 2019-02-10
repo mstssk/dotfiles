@@ -4,8 +4,8 @@
 	st = status
 	co = checkout
 	sh = show
-	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
-	showr = show --color-words --word-diff-regex='\\w+|[^[:space:]]'
+	diffr = diff --word-diff-regex="[^€-¿][€-¿]*" --word-diff=color
+	showr = show --word-diff-regex="[^€-¿][€-¿]*" --word-diff=color
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [user]
 	name = mstssk
