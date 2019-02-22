@@ -110,3 +110,6 @@ alias nl="echo npm run lint; npm run lint"
 alias nf="echo 'npm run fmt|format'; npm run \$(npm run | grep -E '^  fmt|^  format')"
 alias nfl="nf && nl"
 alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
+
+# git
+alias gdb="__b=\$(git branch -vv | fzf +m | sed 's/\*//' | awk '{print $1}'); test -n \"$__b\" && git checkout \$(echo $__b)"
