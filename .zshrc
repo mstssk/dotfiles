@@ -58,7 +58,7 @@ else
 fi
 export LESS='-SR'
 
-export FZF_DEFAULT_OPTS='--height 40% --reverse --print-query --inline-info'
+export FZF_DEFAULT_OPTS='--height 40% --reverse --inline-info'
 
 # java7以降は不要
 # export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
@@ -112,4 +112,5 @@ alias nfl="nf && nl"
 alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
 
 # git
-alias gcb="__b=\$(git branch -vv | fzf +m | sed 's/\*//' | awk '{print $1}'); test -n \"$__b\" && git checkout \$(echo $__b)"
+alias gcb="git branch -vv | fzf +m | sed 's/\*//' | awk '{print \$1}' | xargs git checkout"
+alias gcbr="git branch -r -vv | fzf +m | sed 's/origin\///' | awk '{print \$1}' | xargs git checkout"
