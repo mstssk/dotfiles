@@ -5,3 +5,6 @@ nodebrew install-binary v10
 nodebrew use v10
 
 npm config set init.license MIT
+
+# npm で使うツール
+npm install -g @mstssk/whatver
