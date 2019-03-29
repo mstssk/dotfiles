@@ -16,3 +16,7 @@ fi
 ./setup-node.sh
 
 ./setup-completion.sh # この中でnpm completionもやってる
+
+if [ `uname` = "Darwin" ]; then
+    ./setup-macosx-defaults.sh
+fi
