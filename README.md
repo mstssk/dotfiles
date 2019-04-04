@@ -36,6 +36,10 @@ zshをターミナルのデフォルトに設定するなど別途必要
 |:---------------:|
 | ![システム設定でショートカットキーを変更](./doc/keyborad_shortcuts.png) |
 
+## その他
+
+- [よく使う物理デバイス](./doc/physical_devices.md)
+
 ----
 
 Inspired by https://github.com/vvakame/dotfiles
