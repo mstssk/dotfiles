@@ -3,11 +3,9 @@
 cd `dirname $0`
 
 brew install colordiff
-brew install zsh
-brew install zsh-completions
+brew install zs zsh-completions
 
-brew install jq
-brew install fzf
+brew install jq fzf tree 
 
 brew install git
 brew install tig
