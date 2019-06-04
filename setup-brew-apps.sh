@@ -5,7 +5,7 @@ cd `dirname $0`
 brew install colordiff
 brew install zs zsh-completions
 
-brew install jq fzf tree 
+brew install jq fzf tree wget
 
 brew install git
 brew install tig
