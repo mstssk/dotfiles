@@ -29,6 +29,7 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - https://www.oracle.com/technetwork/java/javase/downloads/index.html
 - https://www.tug.org/mactex/
 - https://clipy-app.com/
+- BetterTouchTool https://folivora.ai/
 
 ## よく使うショートカットキー
 
