@@ -3,7 +3,7 @@
 cd `dirname $0`
 
 brew install colordiff
-brew install zs zsh-completions
+brew install zsh zsh-completions
 
 brew install jq fzf tree wget
 
