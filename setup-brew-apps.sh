@@ -14,3 +14,5 @@ brew install go
 
 # .zshrc で PATH は通してある
 brew install rbenv ruby-build
+
+brew install imageoptim-cli
