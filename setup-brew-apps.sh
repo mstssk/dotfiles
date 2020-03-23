@@ -16,3 +16,5 @@ brew install go
 brew install rbenv ruby-build
 
 brew install imageoptim-cli
+
+brew install azure-cli
