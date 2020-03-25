@@ -36,6 +36,12 @@ if [ `uname` = "Darwin" ]; then
   # export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
   export PATH=$PATH:/usr/local/opt/git/share/git-core/contrib/diff-highlight
 
+  # PostgreSQL v11
+  # export PATH=$PATH:`brew --prefix postgresql@11`/bin
+  if [ -e /usr/local/opt/postgresql@11/ ]; then
+    export PATH=$PATH:/usr/local/opt/postgresql@11/bin
+  fi
+
   # MySQL v5.7
   # export PATH=$PATH:`brew --prefix mysql@5.7`/bin
   if [ -e /usr/local/opt/mysql@5.7/ ]; then
