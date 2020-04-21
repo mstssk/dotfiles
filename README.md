@@ -30,6 +30,7 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - https://www.tug.org/mactex/
 - https://clipy-app.com/
 - BetterTouchTool https://folivora.ai/
+- Karabiner-Elements https://karabiner-elements.pqrs.org/
 
 ## よく使うショートカットキー
 
