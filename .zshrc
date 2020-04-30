@@ -68,6 +68,7 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse --inline-info'
 
 # エディタとしてVS Codeを使う
 export EDITOR="code --wait"
+export GIT_EDITOR="vi"
 
 # java7以降は不要
 # export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
