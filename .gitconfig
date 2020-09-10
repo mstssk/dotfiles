@@ -25,3 +25,5 @@
 	helper = osxkeychain
 [commit]
 	template = ~/.git-commit.template
+[pull]
+	rebase = false
