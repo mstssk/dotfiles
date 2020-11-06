@@ -123,6 +123,7 @@ alias nb="echo npm run build; npm run build"
 alias nl="echo npm run lint; npm run lint"
 alias nf="echo 'npm run fmt|format'; npm run \$(npm run | grep -E '^  fmt|^  format')"
 alias nfl="nf && nl"
+alias nflb="nf && nl && nb"
 alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
 
 # git
