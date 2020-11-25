@@ -118,6 +118,7 @@ alias la="ls -laGF"
 alias ll="ls -lG"
 
 # よく使う npm run-script のショートハンド
+alias ns="echo npm start; npm start"
 alias nt="echo npm test; npm test"
 alias nb="echo npm run build; npm run build"
 alias nl="echo npm run lint; npm run lint"
