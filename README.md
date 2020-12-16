@@ -22,15 +22,21 @@ zshをターミナルのデフォルトに設定するなど別途必要
 
 ## よく使うソフト
 
-- https://imageoptim.com/mac
-- https://code.visualstudio.com/
-    - 設定同期する拡張機能: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
-- https://docs.docker.com/docker-for-mac/
-- https://www.oracle.com/technetwork/java/javase/downloads/index.html
-- https://www.tug.org/mactex/
-- https://clipy-app.com/
+- Clipy https://clipy-app.com/
+- ImageOptim https://imageoptim.com/mac
+- MacTeX https://www.tug.org/mactex/
+
+### Macの環境カスタム
+
 - BetterTouchTool https://folivora.ai/
 - Karabiner-Elements https://karabiner-elements.pqrs.org/
+
+### 開発
+
+- Visual Stuio Code https://code.visualstudio.com/
+    - 設定同期する拡張機能: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+- Docker for Mac https://docs.docker.com/docker-for-mac/
+- Java Platform, Standard Edition https://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 ## よく使うショートカットキー
 
