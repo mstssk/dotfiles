@@ -6,7 +6,8 @@ cd `dirname $0`
 if which brew; then
     brew --version
 else
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Install Homebrew first. https://brew.sh/index_ja"
+    exit 1
 fi
 
 ./setup-brew-apps.sh
