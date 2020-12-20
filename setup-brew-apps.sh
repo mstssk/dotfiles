@@ -7,9 +7,10 @@ brew install colordiff
 brew install zsh zsh-completions
 brew install jq fzf tree wget
 brew install git tig
-brew install go
 
-brew install shellcheck
+# 最近使っていない
+# brew install go
+# brew install shellcheck
 
 # .zshrc で PATH は通してある
 brew install rbenv ruby-build
