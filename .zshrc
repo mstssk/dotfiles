@@ -4,19 +4,18 @@ source ~/.zsh/completion/git-completion-alias.bash
 autoload -U compinit
 compinit
 # compinitでinsecure directoriesエラーが出たら当該ディレクトリの権限を調整してあげる
-# $ chmod g-w /usr/local/share
+# $ chmod g-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 
 # 大文字、小文字を区別せず補完
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-export LANG=ja_JP.UTF-8
-# export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 ## Path settings
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
+
 # Java
-export PATH=$PATH:$JAVA_HOME/bin
+# export JAVA_HOME=$(/usr/libexec/java_home 2>/dev/null)
+# export PATH=$PATH:$JAVA_HOME/bin
+
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
@@ -26,11 +25,11 @@ export PATH=$PATH:~/bin
 export MANPATH=/opt/local/man:$MANPATH
 
 # go
-export GOPATH=~/.go:~/Documents/goworkspace
-export PATH=$PATH:${GOPATH//://bin:}/bin
-export PATH=$PATH:~/Development/google-cloud-sdk/bin
-export PATH=$PATH:~/Development/google-cloud-sdk/platform/google_appengine
-export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
+# export GOPATH=~/.go:~/Documents/goworkspace
+# export PATH=$PATH:${GOPATH//://bin:}/bin
+# export PATH=$PATH:~/Development/google-cloud-sdk/bin
+# export PATH=$PATH:~/Development/google-cloud-sdk/platform/google_appengine
+# export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 
 if [ `uname` = "Darwin" ]; then
   # export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
