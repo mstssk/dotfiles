@@ -70,7 +70,7 @@ export EDITOR="code --wait"
 export GIT_EDITOR="vi"
 
 # direnv
-eval "$(direnv hook zsh)"
+[ -f "$(which direnv)" ] && eval "$(direnv hook zsh)"
 
 # java7以降は不要
 # export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
