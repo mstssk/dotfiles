@@ -33,8 +33,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 
 if [ `uname` = "Darwin" ]; then
-  if [ -x "$(which brew)" ]; then
-    export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
+  if [ -n "${HOMEBREW_PREFIX}" ]; then
+    # `brew --prefix git` を使うのが正確だが遅いので代替実装
+    export PATH=$PATH:${HOMEBREW_PREFIX}/opt/git/share/git-core/contrib/diff-highlight
   fi
 
   # PostgreSQL v11
