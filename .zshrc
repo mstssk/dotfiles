@@ -10,7 +10,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## Path settings
-export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
+# export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 
 # Java
 # export JAVA_HOME=$(/usr/libexec/java_home 2>/dev/null)
