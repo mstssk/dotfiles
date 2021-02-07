@@ -22,11 +22,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# misc
-export PATH=$PATH:~/bin
-
-export MANPATH=/opt/local/man:$MANPATH
-
 # go
 # export GOPATH=~/.go:~/Documents/goworkspace
 # export PATH=$PATH:${GOPATH//://bin:}/bin
