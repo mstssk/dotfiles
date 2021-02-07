@@ -35,8 +35,9 @@ export MANPATH=/opt/local/man:$MANPATH
 # export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 
 if [ `uname` = "Darwin" ]; then
-  # export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
-  export PATH=$PATH:/usr/local/opt/git/share/git-core/contrib/diff-highlight
+  if [ -x "$(which brew)" ]; then
+    export PATH=$PATH:$(brew --prefix git)/share/git-core/contrib/diff-highlight
+  fi
 
   # PostgreSQL v11
   # export PATH=$PATH:`brew --prefix postgresql@11`/bin
