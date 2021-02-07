@@ -12,6 +12,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ## Path settings
 # export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 
+# Homebrew v3 for M1 mac
+[ -x /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
+
 # Java
 # export JAVA_HOME=$(/usr/libexec/java_home 2>/dev/null)
 # export PATH=$PATH:$JAVA_HOME/bin
