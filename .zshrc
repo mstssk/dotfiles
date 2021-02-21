@@ -49,6 +49,12 @@ if [ `uname` = "Darwin" ]; then
   if [ -e /usr/local/opt/mysql@5.7/ ]; then
     export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
   fi
+
+  # Java
+  # brew --prefix java
+  if [ -e ${HOMEBREW_PREFIX}/opt/openjdk ]; then
+    export PATH=${HOMEBREW_PREFIX}/opt/openjdk/bin:$PATH
+  fi
 fi
 
 # ruby,rbenv
