@@ -38,18 +38,18 @@ if [ `uname` = "Darwin" ]; then
   if [ -n "${HOMEBREW_PREFIX}" ]; then
     # `brew --prefix git` を使うのが正確だが遅いので代替実装
     export PATH=$PATH:${HOMEBREW_PREFIX}/opt/git/share/git-core/contrib/diff-highlight
-  fi
 
-  # PostgreSQL v11
-  # export PATH=$PATH:`brew --prefix postgresql@11`/bin
-  if [ -e /usr/local/opt/postgresql@11/ ]; then
-    export PATH=$PATH:/usr/local/opt/postgresql@11/bin
-  fi
+    # PostgreSQL v11
+    # export PATH=`brew --prefix postgresql@11`/bin:$PATH
+    if [ -e ${HOMEBREW_PREFIX}/opt/postgresql@11/ ]; then
+      export PATH=${HOMEBREW_PREFIX}/opt/postgresql@11/bin:$PATH
+    fi
 
-  # Java
-  # brew --prefix java
-  if [ -e ${HOMEBREW_PREFIX}/opt/openjdk ]; then
-    export PATH=${HOMEBREW_PREFIX}/opt/openjdk/bin:$PATH
+    # Java
+    # brew --prefix java
+    if [ -e ${HOMEBREW_PREFIX}/opt/openjdk ]; then
+      export PATH=${HOMEBREW_PREFIX}/opt/openjdk/bin:$PATH
+    fi
   fi
 fi
 
