@@ -36,6 +36,10 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 if [ `uname` = "Darwin" ]; then
   if [ -n "${HOMEBREW_PREFIX}" ]; then
+    # for gcc
+    C_INCLUDE_PATH+=($HOMEBREW_PREFIX/include)
+    CPLUS_INCLUDE_PATH+=($HOMEBREW_PREFIX/include)
+
     # `brew --prefix git` を使うのが正確だが遅いので代替実装
     export PATH=$PATH:${HOMEBREW_PREFIX}/opt/git/share/git-core/contrib/diff-highlight
 
