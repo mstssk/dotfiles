@@ -140,3 +140,4 @@ alias gcb="git branch -vv | fzf +m | sed 's/\*//' | awk '{print \$1}' | xargs gi
 alias gcbr="git branch -r -vv | fzf +m | sed 's/origin\///' | awk '{print \$1}' | xargs git checkout"
 alias gp="git pull"
 alias gc="git checkout"
+alias gf="git fetch"
