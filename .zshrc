@@ -138,6 +138,9 @@ alias nfl="nf && nl"
 alias nflb="nf && nl && nb"
 alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
 
+# rails タスク
+alias rt="echo rails --tasks; \$(rails -T | fzf --exit-0 | sed 's/#.*//')"
+
 # git
 alias gcb="git branch -vv | fzf +m | sed 's/\*//' | awk '{print \$1}' | xargs git checkout"
 alias gcbr="git branch -r -vv | fzf +m | sed 's/origin\///' | awk '{print \$1}' | xargs git checkout"
