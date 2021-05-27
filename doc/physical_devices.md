@@ -3,8 +3,8 @@
 ## マウス
 
 - いつも使ってるマウス
-    - Logicool Wireless Mouse M546
-      https://www.logicool.co.jp/ja-jp/product/wireless-mouse-m546
+    - Logicool M590 Silent Wireless Mouse
+      https://www.logicool.co.jp/ja-jp/product/m590-silent-wireless-mouse
 - ドライバ・ソフトウェア
     - Logicool Options
       https://www.logicool.co.jp/ja-jp/product/options
