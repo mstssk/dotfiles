@@ -1,8 +1,7 @@
 fpath=(~/.zsh/completion $fpath)
 fpath=(/usr/local/share/zsh-completions $fpath)
 source ~/.zsh/completion/git-completion-alias.bash
-autoload -U compinit
-compinit
+autoload -Uz compinit && compinit
 # compinitでinsecure directoriesエラーが出たら当該ディレクトリの権限を調整してあげる
 # $ chmod g-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 # または
@@ -99,6 +98,7 @@ setopt hist_no_store
 setopt hist_reduce_blanks
 setopt no_beep
 setopt hist_ignore_space
+setopt prompt_subst
 
 # 単語の一部と判定する文字群から / を削除. ctrl+w で文字削除する際は / を区切りとしたい.
 WORDCHARS=${WORDCHARS//[\/]}
@@ -114,12 +114,13 @@ if [ `uname` = "Darwin" ]; then
   fi
 fi
 
-autoload colors
-colors
+autoload -Uz vcs_info && precmd () { vcs_info }
+zstyle ":vcs_info:git:*" formats "⎇ %b "
+autoload -Uz colors && colors
 PROMPT="%{${fg[white]}%}[${PROMPT_USERNAME}@%m] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[white]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%{${fg[white]}%}[%~]%{${reset_color}%}"
+RPROMPT="%{${fg[white]}%}\${vcs_info_msg_0_}[%~]%{${reset_color}%}"
 
 alias ls="ls -G"
 alias la="ls -laGF"
