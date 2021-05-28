@@ -120,7 +120,7 @@ autoload -Uz colors && colors
 PROMPT="%{${fg[white]}%}[${PROMPT_USERNAME}@%m] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[white]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%{${fg[white]}%}\${vcs_info_msg_0_}[%~]%{${reset_color}%}"
+RPROMPT="%{${fg[yellow]}%}\${vcs_info_msg_0_}%{${fg[white]}%}[%~]%{${reset_color}%}"
 
 alias ls="ls -G"
 alias la="ls -laGF"
