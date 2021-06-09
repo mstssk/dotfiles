@@ -25,6 +25,8 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - Clipy https://clipy-app.com/
 - ImageOptim https://imageoptim.com/mac
 - MacTeX https://www.tug.org/mactex/
+- Hidden Bar https://apps.apple.com/jp/app/hidden-bar/id1452453066?mt=12
+    - 仕事の都合で入れたくもない常駐ソフトをインストールして、しかもそれがmacのテーマ機能に対応していなくてメニューバー上で目立ってうざいときに使う。
 
 ### Macの環境カスタム
 
