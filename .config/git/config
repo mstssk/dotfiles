@@ -23,6 +23,6 @@
 [credential]
 	helper = osxkeychain
 [commit]
-	template = ~/.git-commit.template
+	template = ~/dotfiles/git-commit.template
 [pull]
 	rebase = false
