@@ -12,8 +12,7 @@ function _lndir() {
 
 ln -s $HOME/dotfiles/.zsh $HOME/
 ln -s $HOME/dotfiles/.zshrc $HOME/
-ln -s $HOME/dotfiles/.gitconfig $HOME/
-ln -s $HOME/dotfiles/.global_ignore $HOME/
+ln -s $HOME/dotfiles/.config/git $HOME/.config/git
 ln -s $HOME/dotfiles/.git-commit.template $HOME/
 # _lndir $HOME/dotfiles/.config/karabiner/ $HOME/.config/karabiner
 

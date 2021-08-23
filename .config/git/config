@@ -12,7 +12,6 @@
 	email = mstssk+github@gmail.com
 [core]
 	pager = less -SR
-	excludesfile = ~/.global_ignore
 [color]
 	ui = auto
 [pager]
