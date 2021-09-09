@@ -138,10 +138,10 @@ alias nf="echo 'npm run fmt|format'; npm run \$(npm run | grep -E '^  fmt|^  for
 alias nfl="nf && nl"
 alias nflb="nf && nl && nb"
 alias nflt="nf && nl && nt"
-alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0)"
+alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0 1>&2 | cat)"
 
 # rails タスク
-alias rt="echo rails --tasks; \$(rails -T | fzf --exit-0 | sed 's/#.*//')"
+alias rt="echo rails --tasks; \$(rails -T | fzf --exit-0 1>&2 | sed 's/#.*//')"
 
 # git
 alias gcb="git branch -vv | fzf +m | sed 's/\*//' | awk '{print \$1}' | xargs git checkout"
