@@ -11,6 +11,9 @@ mv git-completion.zsh _git
 # https://docs.npmjs.com/cli/completion
 npm completion > ./npm-completion.bash
 
+# https://github.com/zsh-users/zsh-completions/blob/master/src/_yarn
+curl -L -O https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_yarn
+
 rm -f ~/.zcompdump
 if [ -x "`which compinit`" ]; then
    compinit
