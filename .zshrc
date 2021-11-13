@@ -113,11 +113,16 @@ if [ `uname` = "Darwin" ]; then
     PROMPT_USERNAME=$MY_REALNAME
   fi
 fi
+# 会社規定のホスト名をカッコつける
+PROMPT_HOSTNAME="%m"
+if [[ `hostname -s` =~ "[\d-]+" ]]; then
+  PROMPT_HOSTNAME="viibar"
+fi
 
 autoload -Uz vcs_info && precmd () { vcs_info }
 zstyle ":vcs_info:git:*" formats "⎇ %b "
 autoload -Uz colors && colors
-PROMPT="%{${fg[white]}%}[${PROMPT_USERNAME}@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[white]}%}[${PROMPT_USERNAME}@${PROMPT_HOSTNAME}] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[white]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[yellow]}%}\${vcs_info_msg_0_}%{${fg[white]}%}[%~]%{${reset_color}%}"
