@@ -19,8 +19,6 @@ mkdir -p $HOME/.nodebrew/src
 # .zshrc で PATH は通してある
 brew install rbenv ruby-build
 
-brew install imageoptim-cli
-
 brew install azure-cli
 brew tap azure/functions
 brew install azure-functions-core-tools@3
