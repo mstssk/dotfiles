@@ -58,11 +58,8 @@ fi
 
 # ruby,rbenv
 [ -f "$(which rbenv)" ] && eval "$(rbenv init - zsh)"
-# python,pyenv,pyenv-virtualenv
-if [ -f "$(which pyenv)" ]; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
+# python,pyenv
+[ -f "$(which pyenv)" ] && eval "$(pyenv init - zsh)"
 
 if [ -x `which colordiff` ]; then
   alias diff='colordiff -u'
