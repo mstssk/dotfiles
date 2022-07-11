@@ -1,5 +1,5 @@
 fpath=(~/.zsh/completion $fpath)
-fpath=(/usr/local/share/zsh-completions $fpath)
+[ -f "$(which brew)" ] && fpath=($(brew --prefix)/share/zsh-completions $fpath)
 source ~/.zsh/completion/git-completion-alias.bash
 autoload -Uz compinit && compinit
 # compinitでinsecure directoriesエラーが出たら当該ディレクトリの権限を調整してあげる
