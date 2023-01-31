@@ -31,7 +31,6 @@ zshをターミナルのデフォルトに設定するなど別途必要
 ### Macの環境カスタム
 
 - BetterTouchTool https://folivora.ai/
-- Karabiner-Elements https://karabiner-elements.pqrs.org/
 
 ### 開発
 
