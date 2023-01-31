@@ -19,19 +19,8 @@ elif [ -x /usr/local/bin/brew ]; then
   eval $(/usr/local/bin/brew shellenv)
 fi
 
-# Java
-# export JAVA_HOME=$(/usr/libexec/java_home 2>/dev/null)
-# export PATH=$PATH:$JAVA_HOME/bin
-
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# go
-# export GOPATH=~/.go:~/Documents/goworkspace
-# export PATH=$PATH:${GOPATH//://bin:}/bin
-# export PATH=$PATH:~/Development/google-cloud-sdk/bin
-# export PATH=$PATH:~/Development/google-cloud-sdk/platform/google_appengine
-# export PATH=$PATH:~/Development/go_appengine # for Standalone Go GAE SDK
 
 if [ `uname` = "Darwin" ]; then
   if [ -n "${HOMEBREW_PREFIX}" ]; then
@@ -76,9 +65,6 @@ export GIT_EDITOR="vi"
 
 # direnv
 [ -f "$(which direnv)" ] && eval "$(direnv hook zsh)"
-
-# java7以降は不要
-# export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
