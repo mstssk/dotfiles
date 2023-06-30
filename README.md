@@ -4,7 +4,8 @@
 
 ## 使い方
 
-※ setup.sh が Homebrew https://brew.sh/ をインストールして、各種アプリをインストールします。
+setup.sh が Homebrew https://brew.sh/ をインストールして、各種アプリをインストールします。
+ホームディレクトリ直下に dotfiles をチェックアウトすることを前提としています。
 
 ```
 $ cd

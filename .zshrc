@@ -22,6 +22,9 @@ fi
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# 任意に作っておいておきたいshell
+export PATH=$HOME/dotfiles/bin:$PATH
+
 if [ `uname` = "Darwin" ]; then
   if [ -n "${HOMEBREW_PREFIX}" ]; then
     # for gcc
