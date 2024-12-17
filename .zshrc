@@ -73,6 +73,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+setopt hist_ignore_space    # 先頭に空白を入れたコマンドを履歴に残さない
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt hist_save_nodups
