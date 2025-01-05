@@ -1,8 +1,8 @@
 #!/bin/bash -u
 
 nodebrew -v
-nodebrew install v18
-nodebrew use v18
+nodebrew install v20
+nodebrew use v20
 
 # npm で使うツール
 npm install -g npm
