@@ -136,6 +136,7 @@ alias yr="echo yarn run; yarn run \$(yarn run | grep -e '^   - \w' | sed 's/^   
 
 # https://pnpm.io/installation#using-a-shorter-alias
 alias pn=pnpm
+alias pnr="echo pnpm run; pnpm run \$(pnpm run | grep -e '^  \w' | fzf --exit-0 1>&2 | cat)"
 
 # rails タスク
 alias rt="echo rails --tasks; \$(rails -T | fzf --exit-0 1>&2 | sed 's/#.*//')"
