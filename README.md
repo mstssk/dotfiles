@@ -25,9 +25,6 @@ zshをターミナルのデフォルトに設定するなど別途必要
 
 - Clipy https://clipy-app.com/
 - ImageOptim https://imageoptim.com/mac
-- MacTeX https://www.tug.org/mactex/
-- Hidden Bar https://apps.apple.com/jp/app/hidden-bar/id1452453066?mt=12
-    - 仕事の都合で入れたくもない常駐ソフトをインストールして、しかもそれがmacのテーマ機能に対応していなくてメニューバー上で目立ってうざいときに使う。
 
 ### Macの環境カスタム
 
@@ -38,7 +35,6 @@ zshをターミナルのデフォルトに設定するなど別途必要
 - Visual Stuio Code https://code.visualstudio.com/
     - 設定同期する拡張機能: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 - Docker for Mac https://docs.docker.com/docker-for-mac/
-- Java Platform, Standard Edition https://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 ## よく使うショートカットキー
 
