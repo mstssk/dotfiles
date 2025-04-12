@@ -22,6 +22,9 @@ fi
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# deno, 公式shellでインストールした場合のパス
+export PATH=$HOME/.deno/bin:$PATH
+
 # 任意に作っておいておきたいshell
 export PATH=$HOME/dotfiles/bin:$PATH
 

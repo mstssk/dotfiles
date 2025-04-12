@@ -3,3 +3,4 @@ git-completion.bash
 npm-completion.bash
 _yarn
 _pnpm
+_deno
