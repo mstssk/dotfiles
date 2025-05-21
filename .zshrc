@@ -97,8 +97,10 @@ if [ `uname` = "Darwin" ]; then
     PROMPT_USERNAME=$MY_REALNAME
   fi
 fi
+# macOS 15.5で%mがホスト名を返さなくなったのでnetworksetupからホスト名を取得
+# PROMPT_HOSTNAME="%m"
+PROMPT_HOSTNAME=`networksetup -getcomputername`
 # 会社規定のホスト名をカッコつける
-PROMPT_HOSTNAME="%m"
 if [[ `hostname -s` =~ "[\d-]+" ]]; then
   PROMPT_HOSTNAME="viibar"
 fi
