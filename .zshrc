@@ -100,10 +100,6 @@ fi
 # macOS 15.5で%mがホスト名を返さなくなったのでnetworksetupからホスト名を取得
 # PROMPT_HOSTNAME="%m"
 PROMPT_HOSTNAME=`networksetup -getcomputername`
-# 会社規定のホスト名をカッコつける
-if [[ `hostname -s` =~ "[\d-]+" ]]; then
-  PROMPT_HOSTNAME="viibar"
-fi
 
 autoload -Uz vcs_info && precmd () { vcs_info }
 zstyle ":vcs_info:git:*" formats "⎇ %b "
