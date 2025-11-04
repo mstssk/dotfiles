@@ -51,6 +51,13 @@ zshをターミナルのデフォルトに設定するなど別途必要
 
 - [よく使う物理デバイス](./doc/physical_devices.md)
 
+## ブックマークレット
+
+- 現在ページを共有のためにタイトル+URLをコピペするやつ
+    ```
+    javascript:prompt('',document.title+' '+location.href);
+    ```
+
 ----
 
 Inspired by https://github.com/vvakame/dotfiles
