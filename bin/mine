@@ -1,6 +1,0 @@
-#!/bin/sh
-
-open -na "RubyMine.app" --args "$@"
-
-# RubyMineのCLIについての公式ガイド
-# https://www.jetbrains.com/help/ruby/working-with-the-ide-features-from-command-line.html
