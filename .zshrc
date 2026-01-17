@@ -84,16 +84,6 @@ setopt prompt_subst
 # 単語の一部と判定する文字群から / を削除. ctrl+w で文字削除する際は / を区切りとしたい.
 WORDCHARS=${WORDCHARS//[\/]}
 
-# Macではプロンプトのユーザー名とRealName(システム設定からすぐ変えられるやつ)とで短い方を表示する
-# 会社マシンとかで、自分でユーザー名つけられなかった場合のため
-PROMPT_USERNAME="%n"
-if [ `uname` = "Darwin" ]; then
-  MY_USERNAME=`whoami`
-  MY_REALNAME=`dscl . -read ~ RealName | cut -c 11-`
-  if [ ${#MY_USERNAME} -gt ${#MY_REALNAME} ]; then
-    PROMPT_USERNAME=$MY_REALNAME
-  fi
-fi
 # macOS 15.5で%mがホスト名を返さなくなったのでnetworksetupからホスト名を取得
 # PROMPT_HOSTNAME="%m"
 PROMPT_HOSTNAME=`networksetup -getcomputername`
@@ -101,7 +91,7 @@ PROMPT_HOSTNAME=`networksetup -getcomputername`
 autoload -Uz vcs_info && precmd () { vcs_info }
 zstyle ":vcs_info:git:*" formats "⎇ %b "
 autoload -Uz colors && colors
-PROMPT="%{${fg[white]}%}[${PROMPT_USERNAME}@${PROMPT_HOSTNAME}] %(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[white]}%}[%n@${PROMPT_HOSTNAME}] %(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[white]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[yellow]}%}\${vcs_info_msg_0_}%{${fg[white]}%}[%~]%{${reset_color}%}"
