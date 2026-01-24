@@ -18,3 +18,8 @@ function _lndir() {
 ln -s $HOME/dotfiles/.zsh $HOME/
 ln -s $HOME/dotfiles/.zshrc $HOME/
 _lndir $HOME/dotfiles/.config/git/ $HOME/.config/git
+
+# Claude用設定ファイル
+mkdir -p $HOME/.claude
+ln -s $HOME/dotfiles/.claude/settings.json $HOME/.claude/settings.json
+ln -s $HOME/dotfiles/.claude/statusline-command.sh $HOME/.claude/statusline-command.sh
