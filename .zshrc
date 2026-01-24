@@ -22,6 +22,9 @@ fi
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# Claude Code など
+export PATH=$HOME/.local/bin:$PATH
+
 # deno, 公式shellでインストールした場合のパス
 export PATH=$HOME/.deno/bin:$PATH
 
