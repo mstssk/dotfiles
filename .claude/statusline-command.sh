@@ -25,4 +25,4 @@ if [ "$USAGE" != "null" ]; then
     PERCENT_USED=$((CURRENT_TOKENS * 100 / CONTEXT_SIZE))
 fi
 
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% | 📁 ${CURRENT_DIR#$HOME}$GIT_BRANCH"
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% | 📁 ${CURRENT_DIR/$HOME/~}$GIT_BRANCH"
