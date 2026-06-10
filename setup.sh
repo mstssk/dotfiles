@@ -11,7 +11,6 @@ else
 fi
 
 ./setup-brew-apps.sh
-# ./setup-brew-python.sh
 ./setup-ln.sh
 
 ./setup-node.sh
