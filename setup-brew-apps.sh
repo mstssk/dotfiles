@@ -11,7 +11,3 @@ brew install git tig
 brew install nodebrew
 # nodebrewのインストールスクリプトが作るはずのフォルダを補完
 mkdir -p $HOME/.nodebrew/src
-
-# 最近使っていない
-# brew install go
-# brew install shellcheck
