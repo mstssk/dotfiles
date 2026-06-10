@@ -36,12 +36,6 @@ if [ `uname` = "Darwin" ]; then
 
     # `brew --prefix git` を使うのが正確だが遅いので代替実装
     export PATH=$PATH:${HOMEBREW_PREFIX}/opt/git/share/git-core/contrib/diff-highlight
-
-    # Java
-    # brew --prefix java
-    if [ -e ${HOMEBREW_PREFIX}/opt/openjdk ]; then
-      export PATH=${HOMEBREW_PREFIX}/opt/openjdk/bin:$PATH
-    fi
   fi
 fi
 
