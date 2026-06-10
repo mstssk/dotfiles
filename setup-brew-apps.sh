@@ -15,6 +15,3 @@ mkdir -p $HOME/.nodebrew/src
 # 最近使っていない
 # brew install go
 # brew install shellcheck
-
-# .zshrc で PATH は通してある
-brew install rbenv ruby-build

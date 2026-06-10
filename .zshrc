@@ -45,9 +45,6 @@ if [ `uname` = "Darwin" ]; then
   fi
 fi
 
-# ruby,rbenv
-[ -f "$(which rbenv)" ] && eval "$(rbenv init - zsh)"
-
 if [ -x `which colordiff` ]; then
   alias diff='colordiff -u'
 else
