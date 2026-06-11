@@ -9,7 +9,7 @@
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [user]
 	name = mstssk
-	email = mstssk+github@gmail.com
+	email = 500072+mstssk@users.noreply.github.com
 [core]
 	pager = less -SR
 [color]
