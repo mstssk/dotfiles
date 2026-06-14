@@ -52,6 +52,9 @@ export GIT_EDITOR="vi"
 # direnv
 [ -f "$(which direnv)" ] && eval "$(direnv hook zsh)"
 
+# mise
+[ -f "$(which mise)" ] && eval "$(mise activate zsh)"
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
