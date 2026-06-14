@@ -13,8 +13,6 @@ fi
 ./setup-brew-apps.sh
 ./setup-ln.sh
 
-./setup-node.sh
-
 ./setup-completion.sh # この中でnpm completionもやってる
 
 if [ `uname` = "Darwin" ]; then
