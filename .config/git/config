@@ -22,7 +22,5 @@
 	prune = true
 [credential]
 	helper = osxkeychain
-[commit]
-	template = ~/dotfiles/git-commit.template
 [pull]
 	rebase = false
