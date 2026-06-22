@@ -10,7 +10,7 @@ else
     exit 1
 fi
 
-./setup-brew-apps.sh
+brew bundle
 ./setup-ln.sh
 
 ./setup-completion.sh # この中でnpm completionもやってる
