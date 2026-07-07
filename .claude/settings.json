@@ -4,5 +4,6 @@
     "command": "bash ~/.claude/statusline-command.sh"
   },
   "language": "japanese",
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "tui": "fullscreen"
 }
