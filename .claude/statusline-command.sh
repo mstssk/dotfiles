@@ -18,11 +18,23 @@ if git rev-parse --git-dir > /dev/null 2>&1; then
     fi
 fi
 
+# トークン数を 12.3k / 1.2M のような読みやすい形式に変換する
+format_tokens() {
+    if [ "$1" -ge 1000000 ]; then
+        awk -v t="$1" 'BEGIN { v = t / 1000000; printf (v == int(v)) ? "%dM" : "%.1fM", v }'
+    elif [ "$1" -ge 1000 ]; then
+        awk -v t="$1" 'BEGIN { v = t / 1000; printf (v == int(v)) ? "%dk" : "%.1fk", v }'
+    else
+        echo "$1"
+    fi
+}
+
 PERCENT_USED=0
+CURRENT_TOKENS=0
 if [ "$USAGE" != "null" ]; then
     # Calculate current context from current_usage fields
     CURRENT_TOKENS=$(echo "$USAGE" | jq '.input_tokens + .cache_creation_input_tokens + .cache_read_input_tokens')
     PERCENT_USED=$((CURRENT_TOKENS * 100 / CONTEXT_SIZE))
 fi
 
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% | 📁 ${CURRENT_DIR/$HOME/~}$GIT_BRANCH"
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE")) | 📁 ${CURRENT_DIR/$HOME/~}$GIT_BRANCH"
