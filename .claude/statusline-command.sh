@@ -8,6 +8,7 @@ MODEL_DISPLAY=$(echo "$input" | jq -r '.model.display_name')
 CURRENT_DIR=$(echo "$input" | jq -r '.workspace.current_dir')
 CONTEXT_SIZE=$(echo "$input" | jq -r '.context_window.context_window_size')
 USAGE=$(echo "$input" | jq '.context_window.current_usage')
+TOTAL_COST_USD=$(echo "$input" | jq -r '.cost.total_cost_usd // empty')
 
 # Show git branch if in a git repo
 GIT_BRANCH=""
@@ -37,4 +38,9 @@ if [ "$USAGE" != "null" ]; then
     PERCENT_USED=$((CURRENT_TOKENS * 100 / CONTEXT_SIZE))
 fi
 
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE")) | 📁 ${CURRENT_DIR/$HOME/~}$GIT_BRANCH"
+COST_DISPLAY=""
+if [ -n "$TOTAL_COST_USD" ]; then
+    COST_DISPLAY=" | 💰 \$$(awk -v c="$TOTAL_COST_USD" 'BEGIN { printf "%.2f", c }')"
+fi
+
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$COST_DISPLAY | 📁 ${CURRENT_DIR/$HOME/~}$GIT_BRANCH"
