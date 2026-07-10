@@ -43,4 +43,5 @@ if [ -n "$TOTAL_COST_USD" ]; then
     COST_DISPLAY=" | 💰 \$$(awk -v c="$TOTAL_COST_USD" 'BEGIN { printf "%.2f", c }')"
 fi
 
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$COST_DISPLAY | 📁 ${CURRENT_DIR/$HOME/~}$GIT_BRANCH"
+TILDE="~"
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$COST_DISPLAY | 📁 ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
