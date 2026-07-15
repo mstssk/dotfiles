@@ -12,6 +12,7 @@ fi
 
 brew bundle
 ./setup-ln.sh
+./setup-claude.sh
 
 ./setup-completion.sh # この中でnpm completionもやってる
 
