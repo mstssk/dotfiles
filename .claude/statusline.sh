@@ -15,7 +15,7 @@ GIT_BRANCH=""
 if git rev-parse --git-dir > /dev/null 2>&1; then
     BRANCH=$(git branch --show-current 2>/dev/null)
     if [ -n "$BRANCH" ]; then
-        GIT_BRANCH=" | 🌿 $BRANCH"
+        GIT_BRANCH=" | ⎇ $BRANCH"
     fi
 fi
 
@@ -40,8 +40,8 @@ fi
 
 COST_DISPLAY=""
 if [ -n "$TOTAL_COST_USD" ]; then
-    COST_DISPLAY=" | 💰 \$$(awk -v c="$TOTAL_COST_USD" 'BEGIN { printf "%.2f", c }')"
+    COST_DISPLAY=" | \$$(awk -v c="$TOTAL_COST_USD" 'BEGIN { printf "%.2f", c }')"
 fi
 
 TILDE="~"
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$COST_DISPLAY | 📁 ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$COST_DISPLAY | ⌂ ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
