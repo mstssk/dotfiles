@@ -8,7 +8,9 @@ MODEL_DISPLAY=$(echo "$input" | jq -r '.model.display_name')
 CURRENT_DIR=$(echo "$input" | jq -r '.workspace.current_dir')
 CONTEXT_SIZE=$(echo "$input" | jq -r '.context_window.context_window_size')
 USAGE=$(echo "$input" | jq '.context_window.current_usage')
-TOTAL_COST_USD=$(echo "$input" | jq -r '.cost.total_cost_usd // empty')
+# レート制限の使用率（定額プランのみ・最初のAPIレスポンス後に出現、各ウィンドウは独立して欠落し得る）
+RATE_5H=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
+RATE_7D=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')
 
 # Show git branch if in a git repo
 GIT_BRANCH=""
@@ -30,6 +32,28 @@ format_tokens() {
     fi
 }
 
+# レート制限の使用率バーを組み立てる。引数: ラベル, used_percentage(0〜100)
+# 80%超で ⚠️、100%以上（超過）で 🚨 を末尾に付ける
+format_rate() {
+    local label="$1"
+    local pct="$2"
+    [ -z "$pct" ] && return
+    awk -v label="$label" -v pct="$pct" 'BEGIN {
+        # 5目盛りのバーを組み立てる
+        filled = int(pct / 20 + 0.5)
+        if (filled > 5) filled = 5
+        if (filled < 0) filled = 0
+        bar = ""
+        for (i = 0; i < filled; i++) bar = bar "▓"
+        for (i = filled; i < 5; i++) bar = bar "░"
+        # しきい値に応じた警告記号
+        icon = ""
+        if (pct >= 100)     icon = " 🚨"
+        else if (pct >= 80) icon = " ⚠️"
+        printf " | %s %s %d%%%s", label, bar, int(pct + 0.5), icon
+    }'
+}
+
 PERCENT_USED=0
 CURRENT_TOKENS=0
 if [ "$USAGE" != "null" ]; then
@@ -38,10 +62,7 @@ if [ "$USAGE" != "null" ]; then
     PERCENT_USED=$((CURRENT_TOKENS * 100 / CONTEXT_SIZE))
 fi
 
-COST_DISPLAY=""
-if [ -n "$TOTAL_COST_USD" ]; then
-    COST_DISPLAY=" | \$$(awk -v c="$TOTAL_COST_USD" 'BEGIN { printf "%.2f", c }')"
-fi
+RATE_DISPLAY="$(format_rate "5h" "$RATE_5H")$(format_rate "7d" "$RATE_7D")"
 
 TILDE="~"
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$COST_DISPLAY | ⌂ ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$RATE_DISPLAY | ⌂ ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
