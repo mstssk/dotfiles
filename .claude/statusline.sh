@@ -65,4 +65,4 @@ fi
 RATE_DISPLAY="$(format_rate "5h" "$RATE_5H")$(format_rate "7d" "$RATE_7D")"
 
 TILDE="~"
-echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$RATE_DISPLAY | ⌂ ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
+echo "[$MODEL_DISPLAY] Context: ${PERCENT_USED}% ($(format_tokens "$CURRENT_TOKENS")/$(format_tokens "$CONTEXT_SIZE"))$RATE_DISPLAY | ${CURRENT_DIR/$HOME/$TILDE}$GIT_BRANCH"
