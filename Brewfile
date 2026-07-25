@@ -2,7 +2,7 @@ brew "colordiff"
 brew "direnv"
 brew "fzf"
 brew "git" # diff-highlight を使いたいので
-brew "jq" # statusline-command.sh で使用
+brew "jq" # statusline.sh で使用
 brew "mise"
 brew "tig"
 brew "trash"
