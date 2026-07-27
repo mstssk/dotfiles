@@ -121,3 +121,6 @@ alias gcbr="git branch -r -vv | fzf +m | sed 's/origin\///' | awk '{print \$1}' 
 alias gp="git pull"
 alias gc="git checkout"
 alias gf="git fetch"
+
+# claude
+alias cworktrees="ls -1 .claude/worktrees | fzf +m | xargs --no-run-if-empty claude -w"
