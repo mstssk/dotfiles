@@ -1,7 +1,7 @@
 {
   "statusLine": {
     "type": "command",
-    "command": "bash ~/dotfiles/.claude/statusline.sh"
+    "command": "~/dotfiles/.claude/statusline.sh"
   },
   "language": "japanese",
   "effortLevel": "high"
