@@ -26,7 +26,5 @@ else
    echo "pnpm is not installed."
 fi
 
+# compinitはファイル数でしかキャッシュの新旧を判定しないので、上書き分は消すしかない
 rm -f ~/.zcompdump
-if [ -x "`which compinit`" ]; then
-   compinit
-fi
