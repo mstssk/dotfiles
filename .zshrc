@@ -106,7 +106,7 @@ alias nflb="nf && nl && nb"
 alias nflt="nf && nl && nt"
 alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0 1>&2 | cat)"
 alias ys="echo yarn start; yarn start"
-alias yr="echo yarn run; yarn run \$(yarn run | grep -e '^   - \w' | sed 's/^   - //' | fzf --exit-0 1>&2 | cat)"
+alias yr="echo yarn run; yarn run \$(yarn run --json | jq -r .name | fzf --exit-0 1>&2 | cat)"
 
 # https://pnpm.io/installation#using-a-shorter-alias
 alias pn=pnpm
