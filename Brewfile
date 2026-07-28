@@ -9,3 +9,5 @@ brew "tig"
 brew "trash"
 # brew "zsh" # 最近のMacOSは zsh が入っているのでとりあえずそっち使う
 brew "zsh-completions"
+# GitHub command-line tool
+brew "gh"
