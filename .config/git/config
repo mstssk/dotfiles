@@ -1,3 +1,4 @@
+# 環境固有の設定はこのファイルとは別に ~/.gitconfig に記載する
 [alias]
 	graph = !~/dotfiles/git-graph.sh
 	g = !~/dotfiles/git-graph.sh
