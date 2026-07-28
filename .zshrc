@@ -104,7 +104,7 @@ alias nf="echo 'npm run fmt|format'; npm run \$(npm run | grep -E '^  fmt|^  for
 alias nfl="nf && nl"
 alias nflb="nf && nl && nb"
 alias nflt="nf && nl && nt"
-alias nr="echo npm run; npm run \$(npm run | grep -e '^  \w' | fzf --exit-0 1>&2 | cat)"
+alias nr="echo npm run; npm run \$(npm run --json | jq -r 'keys | .[]' | fzf --exit-0 1>&2 | cat)"
 alias ys="echo yarn start; yarn start"
 alias yr="echo yarn run; yarn run \$(yarn run --json | jq -r .name | fzf --exit-0 1>&2 | cat)"
 
