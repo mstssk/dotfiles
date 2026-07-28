@@ -2,6 +2,12 @@
 
 cd `dirname $0`
 
+# settings.jsonのマージにjqを使う
+if ! command -v jq > /dev/null 2>&1; then
+  echo "jq is not installed."
+  exit 1
+fi
+
 # Claude用設定ファイル
 mkdir -p $HOME/.claude
 
