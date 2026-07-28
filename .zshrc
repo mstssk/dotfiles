@@ -1,5 +1,13 @@
+# Homebrew. 後続のfpathとPATHの前提になるので最初に設定する
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+elif [ -x /usr/local/bin/brew ]; then
+  eval $(/usr/local/bin/brew shellenv)
+fi
+
 fpath=(~/.zsh/completion $fpath)
-[ -f "$(which brew)" ] && fpath=($(brew --prefix)/share/zsh-completions $fpath)
+# shellenvが設定するHOMEBREW_PREFIXを使う. brew --prefix は約28msかかるので呼ばない
+[ -n "${HOMEBREW_PREFIX:-}" ] && fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
 source ~/.zsh/completion/git-completion-alias.bash
 autoload -Uz compinit && compinit
 # compinitでinsecure directoriesエラーが出たら当該ディレクトリの権限を調整してあげる
@@ -11,13 +19,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## Path settings
-
-# Homebrew
-if [ -x /opt/homebrew/bin/brew ]; then
-  eval $(/opt/homebrew/bin/brew shellenv)
-elif [ -x /usr/local/bin/brew ]; then
-  eval $(/usr/local/bin/brew shellenv)
-fi
+# Homebrewは補完の設定より前に必要なのでこのファイルの先頭で設定している
 
 # Claude Code など
 export PATH=$HOME/.local/bin:$PATH
@@ -36,7 +38,7 @@ if [ `uname` = "Darwin" ]; then
   fi
 fi
 
-if [ -x `which colordiff` ]; then
+if (( $+commands[colordiff] )); then
   alias diff='colordiff -u'
 else
   alias diff='diff -u'
@@ -50,10 +52,10 @@ export EDITOR="code --wait"
 export GIT_EDITOR="vi"
 
 # direnv
-[ -f "$(which direnv)" ] && eval "$(direnv hook zsh)"
+(( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
 # mise
-[ -f "$(which mise)" ] && eval "$(mise activate zsh)"
+(( $+commands[mise] )) && eval "$(mise activate zsh)"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
