@@ -1,5 +1,5 @@
 # Homebrew. 後続のfpathとPATHの前提になるので最初に設定する
-# HOMEBREW_PREFIXの存在チェックは、環境によっては .zprofile で設定済みの場合があるため
+# 環境によっては .zprofile で設定済みの場合があるため HOMEBREW_PREFIX の有無で二重実行回避している
 if [ -z "${HOMEBREW_PREFIX:-}" ]; then
   if [ -x /opt/homebrew/bin/brew ]; then
     eval $(/opt/homebrew/bin/brew shellenv)
