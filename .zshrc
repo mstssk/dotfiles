@@ -128,4 +128,4 @@ alias gc="git checkout"
 alias gf="git fetch"
 
 # claude
-alias cworktrees="ls -1 .claude/worktrees | fzf +m | xargs --no-run-if-empty claude -w"
+alias cworktrees="echo claude -w; find .claude/worktrees -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | fzf +m | xargs --no-run-if-empty claude -w"
