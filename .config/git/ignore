@@ -11,3 +11,7 @@ vendor/cache
 # Claude
 **/.claude/settings.local.json
 CLAUDE.local.md
+
+# Codex or other coding agents
+AGENTS.override.md
+AGENTS.local.md
