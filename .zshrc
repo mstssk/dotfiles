@@ -127,5 +127,9 @@ alias gp="git pull"
 alias gc="git checkout"
 alias gf="git fetch"
 
+# git worktree を claude worktree 互換で作成・削除する。Claude使いつつ、他コーディングエージェントも走らせやすくするため
+alias gworktrees-add-to-claude-worktrees="git branch -r -vv | fzf +m | sed 's/origin\///' | awk '{print \$1}' | xargs --no-run-if-empty -I {} git worktree add ./.claude/worktrees/{} {}"
+alias gworktrees-del-in-claude-worktrees="git worktree list | awk 'NR>1 {print \$1}' | fzf +m | xargs --no-run-if-empty git worktree remove"
+
 # claude
 alias cworktrees="echo claude -w; find .claude/worktrees -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | fzf +m | xargs --no-run-if-empty claude -w"
