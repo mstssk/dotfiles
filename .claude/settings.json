@@ -4,5 +4,6 @@
     "command": "~/dotfiles/.claude/statusline.sh"
   },
   "language": "japanese",
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "fallbackModel": ["claude-opus-5", "claude-opus-4-7", "claude-sonnet-5"]
 }
