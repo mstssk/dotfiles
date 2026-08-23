@@ -1,9 +1,11 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "statusLine": {
     "type": "command",
-    "command": "~/dotfiles/.claude/statusline.sh"
+    "command": "bash ~/dotfiles/.claude/statusline.sh"
   },
   "language": "japanese",
   "effortLevel": "high",
-  "fallbackModel": ["claude-opus-5", "claude-opus-4-7", "claude-sonnet-5"]
+  "fallbackModel": ["claude-opus-5", "claude-opus-4-7", "claude-sonnet-5"],
+  "disableDeepLinkRegistration": "disable"
 }
