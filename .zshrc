@@ -97,6 +97,8 @@ alias ls="ls -G"
 alias la="ls -laGF"
 alias ll="ls -lG"
 
+alias ag='ag --hidden'
+
 # よく使う npm run-script のショートハンド
 alias ns="echo npm start; npm start"
 alias nt="echo npm test; npm test"
