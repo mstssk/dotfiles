@@ -27,9 +27,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Claude Code など
 export PATH=$HOME/.local/bin:$PATH
 
-# deno, 公式shellでインストールした場合のパス
-export PATH=$HOME/.deno/bin:$PATH
-
 if [ `uname` = "Darwin" ]; then
   if [ -n "${HOMEBREW_PREFIX}" ]; then
     # for gcc
