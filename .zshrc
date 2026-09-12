@@ -66,7 +66,6 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt hist_save_nodups
 setopt share_history        # share command history data
-# setopt correct
 setopt append_history
 setopt inc_append_history
 setopt hist_no_store
