@@ -72,7 +72,6 @@ setopt inc_append_history
 setopt hist_no_store
 setopt hist_reduce_blanks
 setopt no_beep
-setopt hist_ignore_space
 setopt prompt_subst
 
 # 単語の一部と判定する文字群から / を削除. ctrl+w で文字削除する際は / を区切りとしたい.
