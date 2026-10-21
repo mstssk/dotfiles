@@ -26,6 +26,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Claude Code など
 export PATH=$HOME/.local/bin:$PATH
+export PATH=/opt/homebrew/opt/curl/bin:$PATH
 
 if [ `uname` = "Darwin" ]; then
   if [ -n "${HOMEBREW_PREFIX}" ]; then

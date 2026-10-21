@@ -1,4 +1,5 @@
 brew "colordiff"
+brew "curl"
 brew "direnv"
 brew "fzf"
 brew "git" # diff-highlight を使いたいので
