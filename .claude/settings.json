@@ -6,6 +6,6 @@
   },
   "language": "japanese",
   "effortLevel": "high",
-  "fallbackModel": ["claude-opus-5", "claude-opus-4-7", "claude-sonnet-5"],
+  "fallbackModel": ["opus", "sonnet", "haiku"],
   "disableDeepLinkRegistration": "disable"
 }
