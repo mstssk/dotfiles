@@ -23,7 +23,8 @@ if [ ! -e $HOME/.claude/settings.json ]; then
   cp .claude/settings.json $HOME/.claude/settings.json
 else
   TMPFILE=`mktemp -t dotfiles-claude-settings`
-  jq -s '.[0] * .[1]' .claude/settings.json $HOME/.claude/settings.json > $TMPFILE
+  # リポジトリ側の値を優先する（端末固有のキーはそのまま残る）
+  jq -s '.[0] * .[1]' $HOME/.claude/settings.json .claude/settings.json > $TMPFILE
 
   if diff -q $HOME/.claude/settings.json $TMPFILE > /dev/null; then
     echo ".claude/settings.json: 変更なし"
