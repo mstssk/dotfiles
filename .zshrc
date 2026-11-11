@@ -93,7 +93,7 @@ alias ls="ls -G"
 alias la="ls -laGF"
 alias ll="ls -lG"
 
-alias ag='ag --hidden'
+alias ag='ag --hidden --ignore .git'
 
 # よく使う npm run-script のショートハンド
 alias ns="echo npm start; npm start"
